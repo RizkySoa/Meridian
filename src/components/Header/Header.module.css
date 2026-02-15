@@ -1,0 +1,100 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  padding: 0 28px;
+  background: var(--clr-bg);
+  border-bottom: 1px solid var(--clr-border);
+  /* Subtle backdrop blur so content scrolling beneath looks polished */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ── Wordmark ──────────────────────────────────────────────────────────────── */
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--ff-serif);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  color: var(--clr-ink);
+  user-select: none;
+  cursor: default;
+}
+
+.pip {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #B87333; /* copper — mirrors Q1 accent */
+}
+
+/* ── Right cluster ─────────────────────────────────────────────────────────── */
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+}
+
+.sep {
+  margin: 0 6px;
+  opacity: 0.4;
+}
+
+/* Filter pills */
+.filters {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+}
+
+.filterBtn {
+  padding: 4px 12px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  font-family: var(--ff-sans);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  cursor: pointer;
+  transition:
+    background 120ms ease,
+    color     120ms ease,
+    box-shadow 120ms ease;
+}
+
+.filterBtn:hover {
+  color: var(--clr-sub);
+}
+
+.filterBtnActive {
+  background: var(--clr-bg);
+  color: var(--clr-ink);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
+}

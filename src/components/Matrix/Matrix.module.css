@@ -1,0 +1,80 @@
+/* Matrix fills the viewport below the header */
+.wrap {
+  display: flex;
+  /* 54px = header height; 100dvh collapses correctly on mobile */
+  height: calc(100dvh - 54px);
+  padding: 18px 28px 24px;
+  gap: 0;
+  overflow: hidden;
+}
+
+/* ── Y-axis ────────────────────────────────────────────────────────────────── */
+
+.axisY {
+  flex-shrink: 0;
+  width: 28px;
+  display: flex;
+  flex-direction: column;
+  /* Offset: match the height of the X-axis row so labels align to quadrants */
+  padding-top: 28px;
+}
+
+.axisYLabel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.axisYLabel span {
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+}
+
+/* ── Main column ───────────────────────────────────────────────────────────── */
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ── X-axis ────────────────────────────────────────────────────────────────── */
+
+.axisX {
+  flex-shrink: 0;
+  display: flex;
+  height: 28px;
+  align-items: center;
+}
+
+.axisXLabel {
+  flex: 1;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+}
+
+/* ── 2 × 2 grid ─────────────────────────────────────────────────────────────── */
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3px;
+  overflow: hidden;
+  min-height: 0;
+}

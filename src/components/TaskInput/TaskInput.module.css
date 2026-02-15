@@ -1,0 +1,71 @@
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Wrapper ─────────────────────────────────────────────────────────────────── */
+
+.row {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+  animation: slideIn 150ms ease both;
+}
+
+/* ── Text input ─────────────────────────────────────────────────────────────── */
+
+.input {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--ff-sans);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--clr-ink);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--q-accent-border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  outline: none;
+  transition:
+    border-color 150ms ease,
+    box-shadow   150ms ease;
+}
+
+.input::placeholder {
+  color: var(--clr-muted);
+  opacity: 0.65;
+}
+
+.input:focus {
+  border-color: var(--q-accent);
+  /* Soft glow in the quadrant's accent tint */
+  box-shadow: 0 0 0 3px var(--q-accent-alpha);
+}
+
+/* ── Add button ─────────────────────────────────────────────────────────────── */
+
+.confirmBtn {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: var(--clr-ink);
+  color: var(--clr-bg);
+  font-family: var(--ff-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: opacity 130ms ease;
+}
+
+.confirmBtn:hover {
+  opacity: 0.78;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "itasks",
+  "version": "0.3.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ducanh2912/next-pwa": "^10.2.3",
+    "@tanstack/react-table": "^8.11.3",
+    "@types/luxon": "^3.4.0",
+    "@types/uuid": "^9.0.7",
+    "@vercel/analytics": "^1.1.1",
+    "luxon": "^3.4.4",
+    "next": "^14.2.35",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.24",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,97 @@
+/* ──────────────────────────────────────────────────────────────────────────────
+   Meridian — Global Stylesheet
+   Typography: Fraunces (variable serif) × Plus Jakarta Sans (humanist sans)
+   Palette: warm parchment monochrome + four restrained quadrant accents
+────────────────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+/* ── CSS Design Tokens ──────────────────────────────────────────────────────── */
+
+:root {
+  /* Surface */
+  --clr-bg:       #F5F4EF;   /* warm parchment */
+  --clr-surface:  #ECEAE3;   /* slightly darker surface */
+  --clr-border:   #D5D3CA;   /* subtle divider */
+
+  /* Ink */
+  --clr-ink:      #17160D;   /* near-black with warm undertone */
+  --clr-sub:      #5A5850;   /* secondary text */
+  --clr-muted:    #9A9790;   /* placeholder / metadata */
+
+  /* Typography */
+  --ff-serif:  'Fraunces', 'Georgia', serif;
+  --ff-sans:   'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Radius */
+  --radius-sm: 5px;
+  --radius-md: 7px;
+  --radius-lg: 10px;
+}
+
+/* ── Base Reset ─────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  font-family: var(--ff-sans);
+  background: var(--clr-bg);
+  color: var(--clr-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Allow the Next.js root to fill the viewport */
+#__next,
+main {
+  height: 100%;
+}
+
+/* ── Typography ─────────────────────────────────────────────────────────────── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* ── Focus Ring ─────────────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--clr-ink);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Scrollbar (global thin styling) ───────────────────────────────────────── */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-border) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-border);
+  border-radius: 4px;
+}
