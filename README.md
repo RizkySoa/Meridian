@@ -15,7 +15,7 @@ Aplikasi manajemen tugas berbasis Eisenhower Matrix yang membantu Andamempriorit
 <br/>
 
 <!-- Tambahkan screenshot atau demo GIF di sini -->
-<!-- ![Demo Meridian](public/image.png) -->
+![Demo Meridian](public/image.png)
 
 ## [🔗 Live Demo](https://meridian-ndrk.vercel.app/) ##
 
